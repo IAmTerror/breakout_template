@@ -1,10 +1,21 @@
+--Author :
+--+-+-+-+-+-+-+-+-+-+
+--|I|A|m|T|e|r|r|o|r|
+--+-+-+-+-+-+-+-+-+-+
+
+-- Inspired by : https://www.gamecodeur.fr --- https://www.gamecodeur.fr/liste-ateliers/atelier-casse-brique/
+
+
+-- DEBUG --------------------------------------------------------------------------------------------------------------
+
 -- This line is used to display traces in the console during the execution
 io.stdout:setvbuf('no')
 
 -- This line is used to debug step by step in ZeroBrane Studio
 if arg[#arg] == "-debug" then require("mobdebug").start() end
 
----------------------------------------------------------------------------------
+
+-- VARIABLES ----------------------------------------------------------------------------------------------------------
 
 local pad = {} 
 pad.x = 0
@@ -25,6 +36,9 @@ ball.vy = 0
 local brick = {}
 
 local level = {}
+
+
+-- FUNCTIONS ----------------------------------------------------------------------------------------------------------
 
 function initPlayground()
   ball.glue = true
@@ -83,7 +97,8 @@ function screenCollision()
   end
 end
 
----------------------------------------------------------------------------------
+
+-- LÖVE ---------------------------------------------------------------------------------------------------------------
 
 function love.load()
   
@@ -155,6 +170,9 @@ function love.draw()
     by = by + brick.height
   end
 end
+
+
+-- CONTROLS -----------------------------------------------------------------------------------------------------------
 
 function love.mousepressed(x, y, n)
   if ball.glue == true then
