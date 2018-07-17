@@ -6,7 +6,7 @@
 -- Inspired by : https://www.gamecodeur.fr --- https://www.gamecodeur.fr/liste-ateliers/atelier-casse-brique/
 
 
--- DEBUG --------------------------------------------------------------------------------------------------------------
+-- CONFIG -------------------------------------------------------------------------------------------------------------
 
 -- This line is used to display traces in the console during the execution
 io.stdout:setvbuf('no')
